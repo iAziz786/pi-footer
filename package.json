@@ -1,0 +1,31 @@
+{
+  "name": "@iaziz786/pi-footer",
+  "version": "0.1.0",
+  "description": "Pi extension that replaces the built-in footer with exact token throughput, cache hit stats, and cost.",
+  "keywords": ["pi-package", "extension", "footer", "tokens", "cache"],
+  "type": "module",
+  "license": "MIT",
+  "author": "Mohammad Aziz",
+  "homepage": "https://github.com/iAziz786/pi-footer#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/iAziz786/pi-footer.git"
+  },
+  "main": "./dist/index.js",
+  "files": ["dist", "README.md", "LICENSE"],
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-ai": "*",
+    "@earendil-works/pi-coding-agent": "*"
+  },
+  "scripts": {
+    "build": "bun build ./index.ts --outdir ./dist --target node --format esm --external '@earendil-works/*'",
+    "prepublishOnly": "bun run build && bun test",
+    "test": "bun test"
+  },
+  "pi": {
+    "extensions": ["./dist/index.js"]
+  }
+}
