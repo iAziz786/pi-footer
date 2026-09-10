@@ -1,6 +1,6 @@
 {
   "name": "@iaziz786/pi-footer",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Pi extension that replaces the built-in footer with exact token throughput, cache hit stats, and cost.",
   "keywords": ["pi-package", "extension", "footer", "tokens", "cache"],
   "type": "module",
